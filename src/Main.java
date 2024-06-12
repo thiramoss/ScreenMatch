@@ -1,3 +1,5 @@
+import br.com.thiagoramos.screenmatch.modelos.Filme;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -11,8 +13,7 @@ public class Main {
         meuFilme.avalia(8);
         meuFilme.avalia(9);
         meuFilme.avalia(10);
-        System.out.println(meuFilme.getSomaDasAvaliacoes());
-        System.out.println(meuFilme.getTotalDeAvaliacoes());
-        System.out.println(meuFilme.pegaMedia());
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
+        System.out.println("Média de avaliações: " + meuFilme.pegaMedia());
     }
 }

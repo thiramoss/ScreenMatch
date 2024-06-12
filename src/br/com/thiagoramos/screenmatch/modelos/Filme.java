@@ -1,3 +1,5 @@
+package br.com.thiagoramos.screenmatch.modelos;
+
 public class Filme {
     private String nome;
     private int anoDeLancamento;

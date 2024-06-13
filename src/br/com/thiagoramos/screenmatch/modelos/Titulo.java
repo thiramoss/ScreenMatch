@@ -1,4 +1,7 @@
-public class Filme {
+package br.com.thiagoramos.screenmatch.modelos;
+
+public class Titulo {
+
     private String nome;
     private int anoDeLancamento;
     private boolean incluidoNoFilme;

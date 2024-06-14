@@ -4,6 +4,8 @@ import br.com.thiagoramos.screenmatch.modelos.Episodio;
 import br.com.thiagoramos.screenmatch.modelos.Filme;
 import br.com.thiagoramos.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -42,5 +44,22 @@ public class Main {
         episodio.setNumero(1);
         episodio.setTotalDeViews(300);
         filtro.filtrar(episodio);
+
+        Filme filmeDoThiago = new Filme();
+        filmeDoThiago.setNome("Pulp Fiction");
+        filmeDoThiago.setDuracaoEmMinutos(200);
+        filmeDoThiago.setAnoDeLancamento(1994);
+        filmeDoThiago.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoThiago);
+        listaDeFilmes.add(meuFilme);
+
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
+
+
+
     }
 }

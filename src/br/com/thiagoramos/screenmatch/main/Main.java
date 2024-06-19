@@ -1,3 +1,5 @@
+package br.com.thiagoramos.screenmatch.main;
+
 import br.com.thiagoramos.screenmatch.calculos.CalculadoraTempo;
 import br.com.thiagoramos.screenmatch.calculos.FiltroRecomendacao;
 import br.com.thiagoramos.screenmatch.modelos.Episodio;
@@ -10,9 +12,7 @@ import java.util.ArrayList;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("La La Land");
-        meuFilme.setAnoDeLancamento(2016);
+        Filme meuFilme = new Filme("La La Land", 2016);
         meuFilme.setDuracaoEmMinutos(128);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -23,9 +23,7 @@ public class Main {
         System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
         System.out.println("Média de avaliações: " + meuFilme.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -45,10 +43,8 @@ public class Main {
         episodio.setTotalDeViews(300);
         filtro.filtrar(episodio);
 
-        Filme filmeDoThiago = new Filme();
-        filmeDoThiago.setNome("Pulp Fiction");
+        Filme filmeDoThiago = new Filme("Pulp Fiction", 1994);
         filmeDoThiago.setDuracaoEmMinutos(200);
-        filmeDoThiago.setAnoDeLancamento(1994);
         filmeDoThiago.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();

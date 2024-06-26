@@ -4,8 +4,7 @@ import br.com.thiagoramos.screenmatch.modelos.Filme;
 import br.com.thiagoramos.screenmatch.modelos.Serie;
 import br.com.thiagoramos.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 
 public class MainList {
@@ -19,13 +18,11 @@ public class MainList {
         Serie lost = new Serie("Lost", 2000);
         lost.avalia(10);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeDoThiago);
         lista.add(meuFilme);
         lista.add(outroFilme);
         lista.add(lost);
-
-        Filme f1 = filmeDoThiago;
 
         for (Titulo item: lista) {
             System.out.println(item.getNome());
@@ -47,6 +44,9 @@ public class MainList {
         System.out.println(buscaPorArtista);
 
         Collections.sort(lista);
+        System.out.println(lista);
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando por ano");
         System.out.println(lista);
 
     }
